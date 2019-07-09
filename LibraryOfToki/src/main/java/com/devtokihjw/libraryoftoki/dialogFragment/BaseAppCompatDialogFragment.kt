@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
+import androidx.appcompat.app.AppCompatDialogFragment
 
-abstract class BaseDialogFragment(private val mContentLayoutId: Int = 0) : DialogFragment() {
+abstract class BaseAppCompatDialogFragment(private val mContentLayoutId: Int = 0) : AppCompatDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return if (mContentLayoutId != 0) {

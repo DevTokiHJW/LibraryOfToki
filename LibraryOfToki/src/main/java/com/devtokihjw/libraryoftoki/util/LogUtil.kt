@@ -2,7 +2,7 @@ package com.devtokihjw.libraryoftoki.util
 
 import android.util.Log
 
-var isLogEnable = true
+var isLogEnable = false
 
 fun Any.className() = javaClass.simpleName
 

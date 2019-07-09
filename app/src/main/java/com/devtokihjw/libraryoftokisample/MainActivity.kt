@@ -1,12 +1,5 @@
 package com.devtokihjw.libraryoftokisample
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.devtokihjw.libraryoftoki.activity.BaseAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}
+class MainActivity : BaseAppCompatActivity(R.layout.activity_main)
