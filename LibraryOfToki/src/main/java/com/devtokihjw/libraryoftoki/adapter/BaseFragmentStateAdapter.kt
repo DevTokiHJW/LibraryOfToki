@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-abstract class BaseFragmentStateAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle, private val list: MutableList<Any>?) : FragmentStateAdapter(fragmentManager, lifecycle) {
+abstract class BaseFragmentStateAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle, val list: MutableList<Any>?) : FragmentStateAdapter(fragmentManager, lifecycle) {
 
     constructor(fragmentActivity: FragmentActivity, list: MutableList<Any>?) : this(fragmentActivity.supportFragmentManager, fragmentActivity.lifecycle, list)
 
