@@ -46,4 +46,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta2'
     implementation 'com.google.zxing:core:3.4.0'
     implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha06'
+    implementation 'androidx.browser:browser:1.0.0'
+    implementation 'com.google.firebase:firebase-config:18.0.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
 }

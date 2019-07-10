@@ -1,8 +1,8 @@
 package com.devtokihjw.libraryoftoki.util
 
-import java.io.Serializable
+import android.os.Parcelable
 
-interface Callback<T> : Serializable {
+interface Callback<T> : Parcelable {
 
     fun callback(data: T)
 }
