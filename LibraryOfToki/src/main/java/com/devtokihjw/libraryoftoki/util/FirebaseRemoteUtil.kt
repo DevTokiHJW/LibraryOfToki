@@ -3,10 +3,12 @@ package com.devtokihjw.libraryoftoki.util
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 
-val mFirebaseRemoteConfigSettings: FirebaseRemoteConfigSettings = FirebaseRemoteConfigSettings.Builder()
-        .setFetchTimeoutInSeconds(1000 * 30)
-        .setMinimumFetchIntervalInSeconds(60 * 60)
-        .build()
+val mFirebaseRemoteConfigSettings: FirebaseRemoteConfigSettings by lazy {
+    FirebaseRemoteConfigSettings.Builder()
+            .setFetchTimeoutInSeconds(1000 * 30)
+            .setMinimumFetchIntervalInSeconds(60 * 60)
+            .build()
+}
 
 fun initFirebaseRemoteConfig(func: (FirebaseRemoteConfig?) -> Unit) {
     val mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance()

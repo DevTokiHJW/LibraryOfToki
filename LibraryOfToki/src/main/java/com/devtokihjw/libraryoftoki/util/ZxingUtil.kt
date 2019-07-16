@@ -13,9 +13,9 @@ import com.google.zxing.WriterException
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
 import java.util.*
 
-val REQUEST_CODE = 1
-val RESPONSE_CODE = 2
-val KEY_QRCODE_TEXT = "KEY_QRCODE_TEXT"
+const val REQUEST_CODE = 1
+const val RESPONSE_CODE = 2
+const val KEY_QRCODE_TEXT = "KEY_QRCODE_TEXT"
 
 @Throws(WriterException::class)
 fun String.buildQRCodeWithBitmap(size: Int, logo: Bitmap): Bitmap {

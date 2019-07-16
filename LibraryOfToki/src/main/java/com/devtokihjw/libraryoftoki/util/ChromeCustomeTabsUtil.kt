@@ -7,10 +7,10 @@ import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.browser.customtabs.CustomTabsService.ACTION_CUSTOM_TABS_CONNECTION
 
-val STABLE_PACKAGE = "com.android.chrome"
-val BETA_PACKAGE = "com.chrome.beta"
-val DEV_PACKAGE = "com.chrome.dev"
-val LOCAL_PACKAGE = "com.google.android.apps.chrome"
+const val STABLE_PACKAGE = "com.android.chrome"
+const val BETA_PACKAGE = "com.chrome.beta"
+const val DEV_PACKAGE = "com.chrome.dev"
+const val LOCAL_PACKAGE = "com.google.android.apps.chrome"
 
 var sPackageNameToUse: String? = null
 
