@@ -8,3 +8,7 @@ fun Long.formatOfyyyyMMddHHmmss() = SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Loca
 fun Calendar.formatOfHHmm() = SimpleDateFormat("HH:mm", Locale.getDefault()).format(time)
 
 fun Calendar.formatOfyyyyMMdd() = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault()).format(time)
+
+fun Long?.timeMillisToCalendar() = Calendar.getInstance().apply {
+    timeInMillis = this@timeMillisToCalendar ?: 0
+}

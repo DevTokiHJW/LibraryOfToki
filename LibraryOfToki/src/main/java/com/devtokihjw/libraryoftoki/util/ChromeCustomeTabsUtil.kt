@@ -43,9 +43,7 @@ private fun Context.getPackageNameToUse(): String? {
     val activityIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.example.com"))
 
     val packagesSupportingCustomTabs = pm.getCustomTabsPackages(activityIntent)
-
-    val defaultViewHandlerInfo = pm.resolveActivity(activityIntent, 0)
-    val defaultViewHandlerPackageName: String? = defaultViewHandlerInfo.activityInfo.packageName
+    val defaultViewHandlerPackageName = pm.resolveActivity(activityIntent, 0)?.activityInfo?.packageName
 
     // Now packagesSupportingCustomTabs contains all apps that can handle both VIEW intents
     // and service calls.
