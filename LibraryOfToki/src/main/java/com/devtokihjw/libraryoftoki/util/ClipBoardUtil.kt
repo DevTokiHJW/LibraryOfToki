@@ -6,5 +6,5 @@ import android.content.Context
 
 fun Context.copyText(text: String) {
     printLog("copyText", text)
-    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = ClipData.newPlainText(null, text)
+    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(ClipData.newPlainText(null, text))
 }
