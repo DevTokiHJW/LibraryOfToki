@@ -3,7 +3,7 @@ package com.devtokihjw.libraryoftoki.adapter
 import androidx.recyclerview.widget.RecyclerView
 import com.devtokihjw.libraryoftoki.viewHolder.BaseViewHolder
 
-abstract class BaseRecyclerViewAdapter(private val list: MutableList<Any>?) : RecyclerView.Adapter<BaseViewHolder>() {
+abstract class BaseRecyclerViewAdapter(val list: MutableList<Any>?) : RecyclerView.Adapter<BaseViewHolder>() {
 
     var itemClickFunction: ((Any) -> Unit)? = null
 
