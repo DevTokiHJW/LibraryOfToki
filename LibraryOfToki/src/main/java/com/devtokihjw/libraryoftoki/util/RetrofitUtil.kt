@@ -1,6 +1,7 @@
 package com.devtokihjw.libraryoftoki.util
 
 import okhttp3.OkHttpClient
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,14 +20,14 @@ private fun buildClient() = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
         .build()
 
-fun <Type> Call<Type>.request(TAG: String, onResponse: (Type?, String?) -> Unit, onFailure: (Throwable) -> Unit) {
-    enqueue(object : Callback<Type> {
-        override fun onFailure(call: Call<Type>, t: Throwable) {
+fun Call<ResponseBody>.request(TAG: String, onResponse: (ResponseBody?, String?) -> Unit, onFailure: (Throwable) -> Unit) {
+    enqueue(object : Callback<ResponseBody> {
+        override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
             printLog(TAG, "onFailure = $t")
             onFailure(t)
         }
 
-        override fun onResponse(call: Call<Type>, response: Response<Type>) {
+        override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
             val body = response.body()
             val errorBody = response.errorBody()?.string()
 
