@@ -12,14 +12,14 @@ fun buildClient() = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
         .build()
 
-fun Call<ResponseBody>.request(TAG: String, onResponse: (ResponseBody?, String?) -> Unit, onFailure: (Throwable) -> Unit) {
-    enqueue(object : Callback<ResponseBody> {
-        override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+fun <Type> Call<Type>.request(TAG: String, onResponse: (Type?, String?) -> Unit, onFailure: (Throwable) -> Unit) {
+    enqueue(object : Callback<Type> {
+        override fun onFailure(call: Call<Type>, t: Throwable) {
             printLog(TAG, "onFailure = $t")
             onFailure(t)
         }
 
-        override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+        override fun onResponse(call: Call<Type>, response: Response<Type>) {
             val body = response.body()
             val errorBody = response.errorBody()?.string()
 
