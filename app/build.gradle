@@ -20,10 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        targetCompatibility = '1.8'
-        sourceCompatibility = '1.8'
-    }
 }
 
 dependencies {
@@ -31,7 +27,7 @@ dependencies {
     implementation project(path: ':LibraryOfToki')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41"
     implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
-    implementation 'androidx.core:core-ktx:1.2.0-alpha02'
+    implementation 'androidx.core:core-ktx:1.2.0-alpha03'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta2'
     implementation 'com.google.android.material:material:1.1.0-alpha09'
 }
