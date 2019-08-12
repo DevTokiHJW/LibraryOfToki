@@ -25,6 +25,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
 }
 
 dependencies {
@@ -35,7 +40,7 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.0.0-beta02'
     implementation 'androidx.browser:browser:1.0.0'
     implementation 'com.google.android.material:material:1.1.0-alpha09'
-    implementation 'com.google.zxing:core:3.4.0'
+    implementation 'com.google.zxing:core:3.3.0'
     implementation 'com.google.firebase:firebase-config:18.0.0'
     implementation 'com.google.firebase:firebase-messaging:19.0.1'
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
